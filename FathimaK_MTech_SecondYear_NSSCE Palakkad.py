@@ -1,16 +1,5 @@
 import turtle
 import math
-import random
-
-# def draw_circle(t, radius, color):
-#     t.penup()
-#     t.goto(0, -radius)  # Move turtle to the bottom of the circle's center
-#     t.pendown()
-#     t.color(color)  # Set both pen and fill color to the same
-#     t.begin_fill()
-#     t.circle(radius)  # Draw circle with the center at (0, 0)
-#     t.end_fill()
-#     t.penup()  # Lift pen to avoid drawing when moving the turtle
 
 def draw_circle(t, radius, color):
     t.penup()
@@ -82,17 +71,6 @@ def square_spiral(x, y, pen, color):
     pen.end_fill()
     pen.penup()
 
-def draw_mcircle(t, x, y, radius, color ):
-    t.penup()
-    t.goto(x, y)  # Move turtle to the bottom of the circle's center
-    t.setheading(0) # Ensure the turtle faces the default direction
-    t.pendown()
-    t.color(color)  # Set both pen and fill color to the same
-    t.begin_fill()
-    t.circle(radius)  # Draw circle with the center at (0, 0)
-    t.end_fill()
-    t.penup()  # Lift pen to avoid drawing when moving the turtle
-
 def main(t):
     # Your program logic goes here
     t.speed(0)  # Set turtle speed to max
@@ -105,19 +83,6 @@ def main(t):
     draw_rotated_rectangles(t, 180, 180, "orange", 36, 50)
     draw_rotated_rectangles(t, 165, 165, "yellow", 36, 50, 15)
     draw_rotated_rectangles(t, 150, 150, "white", 36, 50)
-
-    # draw_mcircle(t, 0, 147, 15, "pink" )
-    # draw_mcircle(t, 0, 147, 10, "purple" )
-    # draw_mcircle(t, 140, 70, 15, "pink" )
-    # draw_mcircle(t, 140, 70, 10, "purple" )
-    # draw_mcircle(t, 0, -180, 15, "pink" )
-    # draw_mcircle(t, 0, -180, 10, "purple" )
-    # draw_mcircle(t, 145, -95, 15, "pink" )
-    # draw_mcircle(t, 145, -95, 10, "purple" )
-    # draw_mcircle(t, -140, 70, 15, "pink" )
-    # draw_mcircle(t, -140, 70, 10, "purple" )
-    # draw_mcircle(t, -145, -95, 15, "pink" )
-    # draw_mcircle(t, -145, -95, 10, "purple" )
 
     draw_circle(t, 190, "orange")
     draw_circle(t, 170, "#ba1b09")
@@ -146,10 +111,8 @@ def main(t):
 
     # Inner layer: 
     square_spiral(0, 0, t, "pink")
-
     # Finish up
     my_window.mainloop()
-
 
 # This ensures that main() is called only when this script is run directly
 if __name__ == "__main__":  
